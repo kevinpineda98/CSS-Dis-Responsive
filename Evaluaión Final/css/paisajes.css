@@ -1,0 +1,168 @@
+#contenido{
+    height: min-content;
+    font-family: 'Dancing Script', cursive;
+    max-width: 100%;
+    margin: 0 auto;
+}
+body{
+    background: #02010a;
+}
+img{
+    box-shadow: 2px 2px #02010a;
+}
+@-webkit-keyframes margin {
+    0%{
+        margin-top: 150%;
+    }60%{
+        margin-top: -5%;
+    }100%{
+        margin-top: 0%;
+    }
+}
+/*Encabezado*/
+    #contenido{
+    transition: all;
+    animation: margin 1s;
+    }
+/*Para ambas pantallas*/
+    header{
+        background-color: #275872; 
+        border-radius: 10px 10px 0px 0px;
+        padding-bottom: 1em;
+    }
+    header h1{
+        padding-left: 0.5em;
+        color: white;
+        text-shadow: 2px 2px #02010a;
+        margin: 0%;
+    }
+    #menu #navbar a:hover{
+        color: yellowgreen;
+        transform: scale(1.1,1.1);
+        text-shadow: 2px 2px 1px black;        
+    }
+    #navbar{
+        display: flex;
+        flex-flow: nowrap row;
+        font-size: 1.5em;
+    }
+    #menu-retratos, #menu-inicio {
+        text-decoration: underline;
+        color: white;
+    }
+    #menu-paisajes{
+        text-decoration: none;
+        color: white;
+    }   
+    /*Moviles*/
+    @media screen and (max-width:900px){
+        header h1{ 
+            font-size: 2.3em;
+            text-align:center;
+        }
+        #navbar{
+            justify-content: center;
+        }
+    }
+    /*Desktop*/
+    @media screen and (min-width:900px){
+        #contenido{
+            max-width: 900px;
+        }
+        header{
+            display: flex;
+            flex-flow: row nowrap;
+            margin: auto 0;
+            padding: 1.2em;
+        }
+        header h1{
+            width: 70%;
+            font-size: 2.5em;
+            text-align: left;
+        }
+        header nav{
+            width: 30%;
+            margin: auto 1.4em;
+        }
+        #navbar{
+            justify-content: end;
+            
+        } 
+    }
+/*Aquí empieza el cuerpo */ 
+    /*Sección Imagenes*/
+    .figuras{
+        display: block;
+        margin: 0px auto;
+        padding: 1em 0 1em 0;
+        background-color: #d5c75f;
+    }
+    .figuras img{
+        background-color: #d5c75f;
+        width: 85%;
+        display: block;
+        margin: 0.7em auto;
+        text-decoration: none;
+        border: solid black 1px;
+    }
+    #img1{
+        -webkit-filter: blur(10px);
+    }
+    #img2, #img4, #img6{
+        -webkit-filter: grayscale(100%);
+    }
+    #img3{
+        -webkit-filter: sepia(90%);
+    }
+    @media screen and (min-width:900px){
+        #imagenes{
+            display: flex;
+            flex-flow: row wrap;
+            margin: 0 auto;
+            width: 100%;
+            background-color: #d5c75f;
+            
+        }
+        #imagenes .figuras{
+            width: 33.33%;
+        }  
+    }
+/*Aquí empieza el footer */ 
+footer{
+    text-align: left;
+    display: block;
+    margin-bottom: 1.2em;
+    color: black;
+    background-color: #C6d5c5;
+    border-radius: 0 0 10px 10px;
+    padding: .8em;
+    font-size: 1.3em;
+}
+footer a:visited, footer a:link, footer a:focus{
+    color: rgb(192, 73, 17);
+}
+footer a:hover{
+    text-shadow: 1px 1px rgb(192, 73, 17);  
+}
+@media (min-width:900px){
+    footer {
+        display: flex;
+        flex-direction: row;
+    }
+    #contacto{
+        text-align: left;
+        width: 30%;
+    }
+    #termino{
+        text-align: left;
+        width:25%;
+    }
+    #networks{
+        text-align: left;
+        width:  20%;
+    }
+    #derechos{
+        text-align: left;
+        width: 25%;
+    }
+}
